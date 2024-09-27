@@ -160,3 +160,13 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# duckDB/data warehouse folder
+nlp_2024_us_election_db/
+
+# scratch folder
+scratch/
+
+# document folder
+docs/
+.DS_Store
