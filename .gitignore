@@ -169,4 +169,6 @@ scratch/
 
 # document folder
 docs/
+
+# macOS-specific metadata files
 .DS_Store
