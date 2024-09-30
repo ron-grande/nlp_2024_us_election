@@ -48,6 +48,7 @@ CREATE TABLE config_source(
 	source_id INTEGER PRIMARY KEY AUTOINCREMENT
 	, event_id INTEGER NOT NULL REFERENCES config_event(event_id)
 	, source_type_id INTEGER NOT NULL REFERENCES config_source_type(source_type_id)
+	, api_patameter_id INTEGER NULL REFERENCES config_api_parameter(api_patameter_id)
 	, format_id INTEGER NOT NULL REFERENCES config_format(format_id)
 	, source_name NAVARCHAR(100) NULL
 	, url NVARCHAR(500) NULL
