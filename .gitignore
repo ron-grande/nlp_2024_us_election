@@ -172,3 +172,6 @@ docs/
 
 # macOS-specific metadata files
 .DS_Store
+
+# DATA folder
+DATA/
