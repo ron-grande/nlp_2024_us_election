@@ -178,3 +178,6 @@ DATA/
 
 # .vscode
 .vscode/
+
+# gdrive api token
+token.json
