@@ -175,3 +175,6 @@ docs/
 
 # DATA folder
 DATA/
+
+# .vscode
+.vscode/
