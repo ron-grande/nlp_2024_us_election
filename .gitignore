@@ -173,8 +173,8 @@ docs/
 # macOS-specific metadata files
 .DS_Store
 
-# DATA folder
-DATA/
+# gnews data
+DATA/gnews/
 
 # .vscode
 .vscode/
