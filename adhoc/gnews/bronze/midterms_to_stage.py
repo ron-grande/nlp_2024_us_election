@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import shutil
 import sqlite3
 import requests
 from hashlib import sha256
@@ -26,6 +27,17 @@ DATA_FORMAT = metadata_query_results[4]
 DATA_SOURCE_TYPE = metadata_query_results[5]
 API_URL = metadata_query_results[6]
 DATA_DIR_PATH = '../../../DATA/gnews/midterms/stage/'
+
+# Delete all content in staging folder for idempotency
+for filename in os.listdir(DATA_DIR_PATH):
+    file_path = os.path.join(DATA_DIR_PATH, filename)
+    try:
+        if os.path.isfile(file_path) or os.path.islink(file_path):
+            os.unlink(file_path)
+        elif os.path.isdir(file_path):
+            shutil.rmtree(file_path)
+    except Exception as e:
+        print('Failed to delete %s. Reason: %s' % (file_path, e))
 
 # Convert event date range to datetime
 date_range_min = datetime.strptime(EVENT_START_DATE, '%d %b %Y')
